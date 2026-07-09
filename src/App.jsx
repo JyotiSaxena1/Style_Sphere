@@ -5,6 +5,7 @@ import FeaturedProducts from "./components/home/FeaturedProducts";
 import Testimonials from "./components/home/Testimonials";
 import Newsletter from "./components/home/Newsletter";
 import Gallery from "./components/home/Gallery";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Testimonials />
       <Newsletter />
       <Gallery />
+      <Footer />
     </>
   );
 }
