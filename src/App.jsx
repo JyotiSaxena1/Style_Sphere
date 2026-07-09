@@ -4,6 +4,7 @@ import Categories from "./components/home/Categories";
 import FeaturedProducts from "./components/home/FeaturedProducts";
 import Testimonials from "./components/home/Testimonials";
 import Newsletter from "./components/home/Newsletter";
+import Gallery from "./components/home/Gallery";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <FeaturedProducts />
       <Testimonials />
       <Newsletter />
+      <Gallery />
     </>
   );
 }
