@@ -1,28 +1,29 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const categories = [
   {
     title: 'Women',
     image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800&auto=format&fit=crop',
-    link: '#women',
+    link: '/shop',
     count: '120+ Items',
   },
   {
     title: 'Men',
     image: 'https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=800&auto=format&fit=crop',
-    link: '#men',
+    link: '/shop',
     count: '85+ Items',
   },
   {
     title: 'Beauty',
     image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop',
-    link: '#beauty',
+    link: '/shop',
     count: '45+ Items',
   },
   {
     title: 'Accessories',
     image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=800&auto=format&fit=crop',
-    link: '#accessories',
+    link: '/shop',
     count: '60+ Items',
   },
 ];
@@ -106,13 +107,13 @@ const Categories = () => {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
         >
           {categories.map((category) => (
-            <motion.a
-              href={category.link}
+            <motion.div
               key={category.title}
               variants={cardVariants}
               whileHover={{ y: -8 }}
               className="group relative block aspect-[3/4] rounded-xl overflow-hidden shadow-soft border border-border/20 cursor-pointer bg-card"
             >
+              <Link to={category.link} className="absolute inset-0 z-30" />
               {/* Card Image */}
               <div className="absolute inset-0 w-full h-full overflow-hidden">
                 <img
@@ -155,7 +156,7 @@ const Categories = () => {
                   </div>
                 </div>
               </div>
-            </motion.a>
+            </motion.div>
           ))}
         </motion.div>
       </div>

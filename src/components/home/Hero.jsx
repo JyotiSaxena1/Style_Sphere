@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 import { FiArrowDown } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import heroImage from '../../assets/hero.png';
+
+const MotionLink = motion(Link);
 
 // ─── Animation Variants ──────────────────────────────────────────────────────
 
@@ -122,8 +125,8 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start"
           >
             {/* Primary CTA */}
-            <motion.a
-              href="#shop"
+            <MotionLink
+              to="/shop"
               className="relative inline-flex items-center justify-center gap-2 bg-accent text-primary font-body text-xs uppercase tracking-[0.2em] px-8 py-4 overflow-hidden group"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
@@ -131,11 +134,11 @@ const Hero = () => {
             >
               <span className="relative z-10 font-semibold">Shop Now</span>
               <span className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
-            </motion.a>
+            </MotionLink>
 
             {/* Secondary CTA */}
-            <motion.a
-              href="#collection"
+            <MotionLink
+              to="/shop"
               className="inline-flex items-center justify-center gap-2 border border-secondary/30 text-secondary font-body text-xs uppercase tracking-[0.2em] px-8 py-4 hover:border-accent hover:text-accent transition-all duration-300 group"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
@@ -151,7 +154,7 @@ const Hero = () => {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </motion.a>
+            </MotionLink>
           </motion.div>
 
           {/* Stats Row */}
